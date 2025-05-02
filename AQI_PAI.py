@@ -45,8 +45,8 @@ def get_AQI(query):
         "latitude": latitude,
         "longitude":longitude,
         "hourly": ["pm10", "pm2_5", "nitrogen_dioxide", "sulphur_dioxide"],
-        "past_days": 2,
-        "forecast_days": 2
+        "past_days": 1,
+        "forecast_days": 1
     }
     responses = openmeteo.weather_api(url, params=params)
 
@@ -77,6 +77,13 @@ def get_AQI(query):
     hourly_data["sulphur_dioxide"] = hourly_sulphur_dioxide
 
     hourly_dataframe = pd.DataFrame(data = hourly_data)
+    # Convert the 'date' column to just the date part for grouping
+    hourly_dataframe['date'] = hourly_dataframe['date'].dt.date
+
+    # Group by date and calculate the daily mean for each pollutant
+    daily_df = hourly_dataframe.groupby('date')[['pm10', 'pm2_5', 'nitrogen_dioxide', 'sulphur_dioxide']].mean().reset_index()
+    # print(daily_df)
+    return daily_df
     # print(hourly_dataframe)
     return hourly_dataframe
 

@@ -192,16 +192,13 @@ from openai import OpenAI  # or your specific SDK if this is not the OpenAI pack
 
 # Constants
 # MODEL = 'mistralai/Mistral-Small-3.1-24B-Instruct-2503'
-# API_KEY = 'qqX5z5pWa9vQlL+ZtmN62COXGNS9fmxVc2QMdxckL6c='  
-# BASE_URL = 'http://px101.prod.exalead.com:8110/v1'
+# API_KEY = <API_Key> 
+# BASE_URL = <Base_user>
 
 # # Initialize client
 # client = OpenAI(api_key=API_KEY)
 # client.base_url = BASE_URL 
-# # model = client.chat.completions.create(
-# #                         model=MODEL, 
-# #                         temperature=0,
-# #                         max_tokens=2000)
+
 
 # model = ChatOpenAI(
 #     model_name=MODEL,

@@ -15,7 +15,7 @@ import io
 from langchain_core.memory import BaseMemory
 from langchain.memory import ConversationBufferMemory
 from typing import Optional
-os.environ["TAVILY_API_KEY"] = "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"
+os.environ["TAVILY_API_KEY"] = "API_KEY"
 
 # Load the BLIP processor and model
 def load_blip_model():

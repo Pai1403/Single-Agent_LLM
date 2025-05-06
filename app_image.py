@@ -15,7 +15,7 @@ from PIL import Image
 from transformers import BlipProcessor, BlipForConditionalGeneration
 import io
 
-os.environ["TAVILY_API_KEY"] = "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"
+os.environ["TAVILY_API_KEY"] = "API_KEY"
 
 # Load the BLIP processor and model
 @st.cache_resource

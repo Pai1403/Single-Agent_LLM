@@ -9,7 +9,7 @@ def get_cordinates(query):
 
     url = "https://us1.locationiq.com/v1/search"
     params = {
-        'key': 'pk.f35ace94576aac6b9b1ce7dca1a390a4',
+        'key': 'API_KEY',
         'q': f'{query}',
         'format': 'json',
     }

@@ -55,7 +55,7 @@ BASE_URL=http://localhost:11434/v1  # For ChatOllama with Mistral-Nemo
 save it in .env file
 
 ---
-#🧪 Running the App
+# Running the App
 
 Run the Streamlit interface:
 

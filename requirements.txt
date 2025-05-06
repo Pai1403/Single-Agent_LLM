@@ -1,0 +1,27 @@
+streamlit>=1.32.0
+langgraph>=0.0.40
+openai>=1.23.0
+tavily-python>=0.3.2
+sentence-transformers>=2.2.2
+scikit-learn>=1.4.2
+numpy>=1.26.4
+pandas>=2.2.2
+Pillow>=10.3.0
+torch>=2.1.2
+transformers>=4.40.0
+langchain>=0.1.14
+langchain-community>=0.0.31
+langchain-core>=0.1.41
+langchainhub>=0.1.15
+faiss-cpu>=1.8.0
+blip-image-captioning==0.0.1  # Replace with actual package or GitHub link
+matplotlib>=3.8.4
+python-dotenv>=1.0.1
+openmeteo-requests>=1.0.0
+requests-cache>=1.1.1
+retry-requests>=2.0.0
+opencv-python>=4.9.0.80
+PyYAML>=6.0.1
+aiohttp>=3.9.3
+tqdm>=4.66.2
+ipykernel>=6.29.4

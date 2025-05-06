@@ -12,7 +12,7 @@ from langchain_ollama import OllamaLLM
 # from langchain_community.chat_models import ChatOllama
 from langchain_ollama import ChatOllama
 
-os.environ["TAVILY_API_KEY"] = "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"
+os.environ["TAVILY_API_KEY"] = "API_KEY"
 ##########################################################################################
 # class TavilySearch:
 #     name = "search_web"  # custom name

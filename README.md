@@ -59,10 +59,14 @@ save it in .env file
 
 Run the Streamlit interface:
 
+1. To run with streamlit interface
 ```bash
-streamlit run app.py
+streamlit run app_image.py
 ```
-
+2. To run in Terminal
+```bash
+python Only_Code.py  #windows
+python3 Only_Code.py #MAC   
 ---
 # Model Setup (Mistral-Nemo via ChatOllama)
 

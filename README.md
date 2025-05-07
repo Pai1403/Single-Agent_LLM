@@ -16,7 +16,7 @@ This project is a final-year research assistant platform built using **LangGraph
 
 ## 🚀 Installation
 
-1. **Clone the repository:**
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/Pai1403/Single-Agent_LLM
@@ -66,7 +66,8 @@ streamlit run app_image.py
 2. To run in Terminal
 ```bash
 python Only_Code.py  #windows
-python3 Only_Code.py #MAC   
+python3 Only_Code.py #MAC
+```
 ---
 # Model Setup (Mistral-Nemo via ChatOllama)
 
@@ -112,5 +113,5 @@ Ollama errors: Make sure the model is running and BASE_URL is correct.
 Dependencies: If modules are missing, re-run ```pip install -r requirements.txt.```
 
 
-#📄 License
+# 📄 License
 MIT License – Feel free to use and modify this project for educational purposes.

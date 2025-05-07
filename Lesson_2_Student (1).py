@@ -9,24 +9,12 @@ import os
 from AQI_PAI import get_AQI
 from langchain_core.tools import Tool
 from langchain_ollama import OllamaLLM
-# from langchain_community.chat_models import ChatOllama
 from langchain_ollama import ChatOllama
 
 os.environ["TAVILY_API_KEY"] = "API_KEY"
 ##########################################################################################
-# class TavilySearch:
-#     name = "search_web"  # custom name
 
-#     def invoke(self, args: dict) -> str:
-#         query = args.get("query")
-#         if not query:
-#             return "Missing 'query' in arguments."
-        
-#         tool = TavilySearchResults(max_results=5)
-#         return tool.invoke({"query": query})
-    
 def search_web(query: str) -> str:
-    # tool = TavilySearchResults(max_results=5)
     tool = TavilyAnswer(max_results=5)
 
     return tool.invoke({"query": query})
@@ -43,10 +31,6 @@ aqi_tool = Tool.from_function(
     description="Get the air quality data for a specific city or location (e.g., Delhi)."
 )
 #############TOOLS######################
-# aqi_tool = AQITool()
-# web_search=TavilyAnswer(max_results=4)
-# tools = [TavilySearch(), aqi_tool]
-# tool = TavilySearchResults(max_results=4) #increased number of results
 tools = [ aqi_tool, search_web_tool]
 
 
@@ -169,19 +153,6 @@ class Agent:
 
 
 
-    # def take_action(self, state: AgentState):
-    #     tool_calls = state['messages'][-1].tool_calls
-    #     results = []
-    #     for t in tool_calls:
-    #         print(f"Calling: {t}")
-    #         if not t['name'] in self.tools:      # check for bad tool name from LLM
-    #             print("\n ....bad tool name....")
-    #             result = "bad tool name, retry"  # instruct LLM to retry if bad
-    #         else:
-    #             result = self.tools[t['name']].invoke(t['args'])
-    #         results.append(ToolMessage(tool_call_id=t['id'], name=t['name'], content=str(result)))
-    #     print("Back to the model!")
-    #     return {'messages': results}
 
 prompt = """You are a smart research assistant. Use the search engine to look up information. \
 You are allowed to make multiple calls (either together or in sequence). \
@@ -213,8 +184,8 @@ What is the GDP of that state? Answer each question.?"
 messages = [HumanMessage(content=query)]
 
 # model = ChatOpenAI(model="gpt-4o")  # requires more advanced model
-# abot = Agent(tools, system=prompt) # 
-abot = Agent(tools, system=prompt) #- when running on proxim
+# abot = Agent(model, tools, system=prompt) #  when running on cloud [ also change the Agent class] 
+abot = Agent(tools, system=prompt) #- when running locally
 result = abot.graph.invoke({"messages": messages})
 
 

@@ -1,6 +1,11 @@
 # 🧠 Multimodal Research Assistant – AutoMates
 
 This project is a final-year research assistant platform built using **LangGraph**, **Streamlit**, **BLIP**, and **ChatOllama (Mistral-Nemo)**. It supports multimodal inputs, hybrid similarity search, ticket management, and integrates various APIs like **Tavily**, **OpenMeteo**, and **OpenAI** for enhanced research and automation.
+To read a summarised version of this repo please visit :
+
+ [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Pai1403/Single-Agent_LLM)
+
+ 
 
 ---
 
